@@ -1,0 +1,50 @@
+.grid-view table.items th{
+    background: dimgrey !important;
+}
+
+.grid-view table.items {
+    width: 90% !important;
+    margin-left: 50px;
+    margin-top: 10px;
+}
+
+.grid-view table tbody tr td {
+    text-align: center;
+}
+
+#mainmenu {
+    background: dimgrey !important;
+}
+
+#header {
+    border-top: 1px solid dimgray !important;
+}
+
+#footer {
+    border-top: 1px solid dimgray !important;
+}
+
+#logo {
+    text-align: center;
+    font-size: 300% !important;
+}
+
+.grid-view table.items th, .grid-view table.items td {
+    font-size: 1em !important;
+}
+
+.grid-view .summary {
+    margin: 0 50px 5px 0 !important;
+}
+
+.pageTitle {
+    text-align: left;
+    margin-top: 25px;
+    margin-left: 55px;
+    margin-bottom: -30px;
+}
+
+#mainmenu ul li a:hover, #mainmenu ul li.active a {
+    background-color: transparent !important;
+    color: white !important;
+}
