@@ -1356,3 +1356,18 @@ Stack trace:
 REQUEST_URI=/printermanager/index.php?r=room/update&id=17
 HTTP_REFERER=http://localhost:81/printermanager/index.php?r=room/view&id=17
 ---
+2018/07/11 12:51:23 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[HY000]: General error: 1005 Can't create table `printer_db`.`#sql-1cfc_1d5` (errno: 150 "Foreign key constraint is incorrectly formed"). The SQL statement executed was: ALTER TABLE `tbl_printer` ADD CONSTRAINT `FK-printer-room` FOREIGN KEY (`room_id`) REFERENCES `room` (`id`).
+2018/07/11 12:52:28 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'tbl_printer' already exists. The SQL statement executed was: CREATE TABLE `tbl_printer` (
+	`id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`name` varchar(255) NOT NULL,
+	`inventoryNumber` varchar(255) NOT NULL,
+	`room_id` int(11) NOT NULL
+).
+2018/07/11 12:53:00 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'tbl_printer' already exists. The SQL statement executed was: CREATE TABLE `tbl_printer` (
+	`id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`name` varchar(255) NOT NULL,
+	`inventoryNumber` varchar(255) NOT NULL,
+	`room_id` int(11) NOT NULL
+).
+2018/07/11 12:53:44 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[HY000]: General error: 1005 Can't create table `printer_db`.`#sql-1cfc_1f4` (errno: 150 "Foreign key constraint is incorrectly formed"). The SQL statement executed was: ALTER TABLE `tbl_printer` ADD CONSTRAINT `FK-printer-room` FOREIGN KEY (`room_id`) REFERENCES `room` (`id`) ON DELETE CASCADE ON UPDATE CASCADE.
+2018/07/11 12:59:10 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[HY000]: General error: 1005 Can't create table `printer_db`.`#sql-1cfc_25c` (errno: 150 "Foreign key constraint is incorrectly formed"). The SQL statement executed was: ALTER TABLE `tbl_printer` ADD CONSTRAINT `FK_printer_room` FOREIGN KEY (`room_id`) REFERENCES `room` (`id`) ON DELETE CASCADE ON UPDATE CASCADE.
