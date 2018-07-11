@@ -17,6 +17,8 @@
 <?php $this->endWidget(); ?>
     
 </div>
+
+<h3>Zarządzaj pomieszczeniami</h3>
 <?php 
 
 $this->widget('zii.widgets.grid.CGridView', array(
@@ -28,13 +30,19 @@ $this->widget('zii.widgets.grid.CGridView', array(
         'name',
         array(
             'class'=>'CButtonColumn',
+            'template' => '{view}',
             'buttons' => array(
                 'view' => array(
                     'url' => 'Yii::app()->createUrl("room/view", array("id"=>$data->id))'
                 )
             )
         )
-    )
+    ),
+    'summaryText' => 'Ilość pozycji: {end}',
 ));
+
+$this->menu=array(
+    array('label'=>'Powrót', 'url'=>array('index')),
+);
 
 

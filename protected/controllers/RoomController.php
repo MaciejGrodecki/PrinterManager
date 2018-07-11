@@ -17,7 +17,7 @@ class RoomController extends Controller
             $model->attributes=$_POST['Room'];
             if($model->save())
             {
-                $this->redirect(array('index.php'));
+                $this->redirect(array('index'));
             }
         }
         
@@ -39,14 +39,48 @@ class RoomController extends Controller
     
     public function actionView($id)
     {
-        $criteria = new CDbCriteria();
-        $criteria->compare('id', $id);
-        
-        $model = Room::model()->find($criteria);
+        $model = $this->getModel($id);
         
         $this->render('view', array(
             'model'=>$model
         ));
+    }
+    
+    public function actionDelete($id)
+    {
+        $model = $this->getModel($id);
+        $model->delete();
+        
+        if(!isset($_GET['ajax']))
+        {
+            $this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('manage'));
+        }
+    }
+    
+    public function actionUpdate($id)
+    {
+        $model = $this->getModel($id);
+        
+        if(isset($_POST['Room']))
+        {
+            $model->attributes=$_POST['Room'];
+            if($model->save())
+            {
+                $this->redirect(array('view', 'id'=>$model->id));
+            }
+        }
+        
+        $this->render('edit', array('model'=>$model));
+    }
+    
+    
+    private function getModel($id)
+    {
+        $criteria = new CDbCriteria();
+        $criteria->compare('id',$id);
+        $model = Room::model()->find($criteria);
+        
+        return $model;
     }
     
 

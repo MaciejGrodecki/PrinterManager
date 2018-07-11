@@ -1,3 +1,4 @@
+<h3>Dodaj pomieszczenie</h3>
 <div class="form">
     <?php $form=$this->beginWidget('CActiveForm',array(
         'id'=>'room-form',
@@ -15,12 +16,18 @@
     </div>
     <div class="row buttons">
         <?php
-            echo CHtml::submitButton($model->isNewRecord ? 'Zapisz' : 'Save') ?>
+            echo CHtml::submitButton($model->isNewRecord ? 'Zapisz' : 'Zapisz'); 
+            ?>
     </div>
     
     
     <?php $this->endWidget(); ?>
 </div>
+
+<?php
+$this->menu=array(
+    array('label'=>'Powrót', 'url'=>array('index')),
+);
 
 
 
