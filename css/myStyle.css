@@ -34,7 +34,7 @@
 }
 
 .grid-view .summary {
-    margin: 0 50px 5px 0 !important;
+    margin: 0 20px 5px 0 !important;
 }
 
 .pageTitle {
@@ -47,4 +47,9 @@
 #mainmenu ul li a:hover, #mainmenu ul li.active a {
     background-color: transparent !important;
     color: white !important;
+}
+
+.portlet-decoration {
+    background: dimgrey !important;
+    border-left: none !important;
 }
