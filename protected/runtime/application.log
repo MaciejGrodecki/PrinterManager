@@ -3243,3 +3243,67 @@ Stack trace:
 REQUEST_URI=/PrinterManager/index.php?r=printer/add
 HTTP_REFERER=http://localhost:81/PrinterManager/index.php?r=printer/index
 ---
+2018/07/12 12:52:16 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "PrinterController/index". in C:\xampp\htdocs\yii-1.1.19.5790cb\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.19.5790cb\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\xampp\htdocs\yii-1.1.19.5790cb\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\PrinterManager\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PrinterManager/index.php
+---
+2018/07/12 12:52:23 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "PrinterController/actionIndex". in C:\xampp\htdocs\yii-1.1.19.5790cb\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.19.5790cb\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\xampp\htdocs\yii-1.1.19.5790cb\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\PrinterManager\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PrinterManager/index.php
+---
+2018/07/12 12:52:27 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "PrinterController/actionIndex". in C:\xampp\htdocs\yii-1.1.19.5790cb\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.19.5790cb\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\xampp\htdocs\yii-1.1.19.5790cb\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\PrinterManager\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PrinterManager/
+---
+2018/07/12 12:53:31 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "PrinterController/index.php?r=printer". in C:\xampp\htdocs\yii-1.1.19.5790cb\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.19.5790cb\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\xampp\htdocs\yii-1.1.19.5790cb\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\PrinterManager\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PrinterManager/
+---
+2018/07/12 12:53:32 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "PrinterController/index.php?r=printer". in C:\xampp\htdocs\yii-1.1.19.5790cb\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.19.5790cb\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\xampp\htdocs\yii-1.1.19.5790cb\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\PrinterManager\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PrinterManager/
+---
+2018/07/12 12:53:32 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "PrinterController/index.php?r=printer". in C:\xampp\htdocs\yii-1.1.19.5790cb\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.19.5790cb\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\xampp\htdocs\yii-1.1.19.5790cb\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\PrinterManager\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PrinterManager/
+---
+2018/07/12 12:53:39 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "index.php?r=printer". in C:\xampp\htdocs\yii-1.1.19.5790cb\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.19.5790cb\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\xampp\htdocs\yii-1.1.19.5790cb\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\PrinterManager\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PrinterManager/
+---
+2018/07/12 12:53:46 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "PrinterController". in C:\xampp\htdocs\yii-1.1.19.5790cb\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.19.5790cb\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\xampp\htdocs\yii-1.1.19.5790cb\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\PrinterManager\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PrinterManager/
+---
