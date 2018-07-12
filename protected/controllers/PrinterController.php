@@ -1,6 +1,6 @@
 <?php
 
-class PrinterController extends Controller
+class PrinterController extends BaseController
 {
     public $layout = '//layouts/column2';
     
@@ -37,6 +37,11 @@ class PrinterController extends Controller
         }
         
         $this->render('manage', array('model'=>$model));
+    }
+    
+    public function actionView($id)
+    {
+        
     }
 }
 

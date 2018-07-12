@@ -39,7 +39,8 @@ $this->widget('zii.widgets.grid.CGridView', array(
                 )
             )
         )
-    )
+    ),
+    'summaryText' => 'Ilość elementów: {end}',
 ));
 
 $this->menu=array(

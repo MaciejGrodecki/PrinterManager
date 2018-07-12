@@ -1,5 +1,5 @@
 <?php
-class RoomController extends Controller
+class RoomController extends BaseController
 {
     public $layout = '//layouts/column2';
     
@@ -39,7 +39,7 @@ class RoomController extends Controller
     
     public function actionView($id)
     {
-        $model = $this->getModel($id);
+        $model = $this->getModel($id, 'Room');
         
         $this->render('view', array(
             'model'=>$model
@@ -48,7 +48,7 @@ class RoomController extends Controller
     
     public function actionDelete($id)
     {
-        $model = $this->getModel($id);
+        $model = $this->getModel($id, 'Room');
         $model->delete();
         
         if(!isset($_GET['ajax']))
@@ -59,7 +59,7 @@ class RoomController extends Controller
     
     public function actionUpdate($id)
     {
-        $model = $this->getModel($id);
+        $model = $this->getModel($id, 'Room');
         
         if(isset($_POST['Room']))
         {
@@ -72,17 +72,4 @@ class RoomController extends Controller
         
         $this->render('edit', array('model'=>$model));
     }
-    
-    
-    private function getModel($id)
-    {
-        $criteria = new CDbCriteria();
-        $criteria->compare('id',$id);
-        $model = Room::model()->find($criteria);
-        
-        return $model;
-    }
-    
-
 }
-

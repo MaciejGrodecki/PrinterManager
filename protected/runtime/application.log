@@ -3149,3 +3149,36 @@ Stack trace:
 REQUEST_URI=/PrinterManager/index.php?r=printer/manage
 HTTP_REFERER=http://localhost:81/PrinterManager/index.php?r=printer/index
 ---
+2018/07/12 12:09:12 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "view". in C:\xampp\htdocs\yii-1.1.19.5790cb\framework\web\CController.php:486
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.19.5790cb\framework\web\CController.php(270): CController->missingAction('view')
+#1 C:\xampp\htdocs\yii-1.1.19.5790cb\framework\web\CWebApplication.php(282): CController->run('view')
+#2 C:\xampp\htdocs\yii-1.1.19.5790cb\framework\web\CWebApplication.php(141): CWebApplication->runController('printer/view')
+#3 C:\xampp\htdocs\yii-1.1.19.5790cb\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\PrinterManager\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/PrinterManager/index.php?r=printer/view&id=6
+HTTP_REFERER=http://localhost:81/PrinterManager/index.php?r=printer/manage
+---
+2018/07/12 12:10:35 [error] [php] include(BaseController.php): failed to open stream: No such file or directory (C:\xampp\htdocs\yii-1.1.19.5790cb\framework\YiiBase.php:432)
+Stack trace:
+#0 C:\xampp\htdocs\PrinterManager\protected\controllers\PrinterController.php(3): spl_autoload_call()
+#1 C:\xampp\htdocs\yii-1.1.19.5790cb\framework\web\CWebApplication.php(354): require()
+#2 C:\xampp\htdocs\yii-1.1.19.5790cb\framework\web\CWebApplication.php(276): CWebApplication->createController()
+#3 C:\xampp\htdocs\yii-1.1.19.5790cb\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\yii-1.1.19.5790cb\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\PrinterManager\index.php(13): CWebApplication->run()
+REQUEST_URI=/PrinterManager/index.php?r=printer/manage
+in C:\xampp\htdocs\PrinterManager\protected\controllers\PrinterController.php (3)
+in C:\xampp\htdocs\PrinterManager\index.php (13)
+2018/07/12 12:10:39 [error] [php] include(BaseController.php): failed to open stream: No such file or directory (C:\xampp\htdocs\yii-1.1.19.5790cb\framework\YiiBase.php:432)
+Stack trace:
+#0 C:\xampp\htdocs\PrinterManager\protected\controllers\PrinterController.php(3): spl_autoload_call()
+#1 C:\xampp\htdocs\yii-1.1.19.5790cb\framework\web\CWebApplication.php(354): require()
+#2 C:\xampp\htdocs\yii-1.1.19.5790cb\framework\web\CWebApplication.php(276): CWebApplication->createController()
+#3 C:\xampp\htdocs\yii-1.1.19.5790cb\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\yii-1.1.19.5790cb\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\PrinterManager\index.php(13): CWebApplication->run()
+REQUEST_URI=/PrinterManager/index.php?r=printer/index
+in C:\xampp\htdocs\PrinterManager\protected\controllers\PrinterController.php (3)
+in C:\xampp\htdocs\PrinterManager\index.php (13)
