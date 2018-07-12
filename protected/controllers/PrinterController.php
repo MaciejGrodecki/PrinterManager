@@ -2,8 +2,6 @@
 
 class PrinterController extends BaseController
 {
-    
-    
     public function actionIndex()
     {
         $this->render('index');
@@ -11,17 +9,8 @@ class PrinterController extends BaseController
     
     public function actionAdd()
     {
-        $model = new Printer;
-        
-        if(isset($_POST['Printer']))
-        {
-            $model->attributes=$_POST['Printer'];
-            var_dump($model);
-            if($model->save())
-            {
-                $this->redirect(array('index'));
-            }
-        }
+        $model = new Printer;        
+        $this->add($model);
         
         $this->render('add', array('model'=>$model));
     }
@@ -41,7 +30,7 @@ class PrinterController extends BaseController
     
     public function actionView($id)
     {
-        $model = $this->getModel($id, 'Printer');
+        $model = $this->getModel($id);
         
         $this->render('view', array(
             'model'=>$model
@@ -50,7 +39,7 @@ class PrinterController extends BaseController
     
     public function actionDelete($id)
     {
-        $model = $this->getModel($id, 'Printer');
+        $model = $this->getModel($id);
         $model->delete();
         
         if(!isset($_GET['ajax']))
@@ -61,16 +50,9 @@ class PrinterController extends BaseController
     
     public function actionUpdate($id)
     {
-        $model = $this->getModel($id, 'Printer');
+        $model = $this->getModel($id);
         
-        if(isset($_POST['Printer']))
-        {
-            $model->attributes=$_POST['Printer'];
-            if($model->save())
-            {
-                $this->redirect(array('view', 'id'=>$model->id));
-            }
-        }
+        $this->update($model);
         
         $this->render('edit', array('model'=>$model));
     }

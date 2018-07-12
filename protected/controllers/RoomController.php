@@ -1,8 +1,6 @@
 <?php
 class RoomController extends BaseController
 {
-    
-    
     public function actionIndex()
     {
         $this->render('index');
@@ -12,14 +10,7 @@ class RoomController extends BaseController
     {
         $model = new Room;
         
-        if(isset($_POST['Room']))
-        {
-            $model->attributes=$_POST['Room'];
-            if($model->save())
-            {
-                $this->redirect(array('index'));
-            }
-        }
+        $this->add($model);
         
         $this->render('add', array('model'=>$model));
     }
@@ -39,7 +30,7 @@ class RoomController extends BaseController
     
     public function actionView($id)
     {
-        $model = $this->getModel($id, 'Room');
+        $model = $this->getModel($id);
         
         $this->render('view', array(
             'model'=>$model
@@ -48,7 +39,7 @@ class RoomController extends BaseController
     
     public function actionDelete($id)
     {
-        $model = $this->getModel($id, 'Room');
+        $model = $this->getModel($id);
         $model->delete();
         
         if(!isset($_GET['ajax']))
@@ -59,16 +50,9 @@ class RoomController extends BaseController
     
     public function actionUpdate($id)
     {
-        $model = $this->getModel($id, 'Room');
+        $model = $this->getModel($id);
         
-        if(isset($_POST['Room']))
-        {
-            $model->attributes=$_POST['Room'];
-            if($model->save())
-            {
-                $this->redirect(array('view', 'id'=>$model->id));
-            }
-        }
+        $this->update($model);
         
         $this->render('edit', array('model'=>$model));
     }
