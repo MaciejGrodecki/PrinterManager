@@ -1,7 +1,7 @@
 <?php
 class RoomController extends BaseController
 {
-    public $layout = '//layouts/column2';
+    
     
     public function actionIndex()
     {

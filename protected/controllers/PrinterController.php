@@ -2,7 +2,7 @@
 
 class PrinterController extends BaseController
 {
-    public $layout = '//layouts/column2';
+    
     
     public function actionIndex()
     {
@@ -41,7 +41,38 @@ class PrinterController extends BaseController
     
     public function actionView($id)
     {
+        $model = $this->getModel($id, 'Printer');
         
+        $this->render('view', array(
+            'model'=>$model
+        ));
+    }
+    
+    public function actionDelete($id)
+    {
+        $model = $this->getModel($id, 'Printer');
+        $model->delete();
+        
+        if(!isset($_GET['ajax']))
+        {
+            $this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('manage'));
+        }
+    }
+    
+    public function actionUpdate($id)
+    {
+        $model = $this->getModel($id, 'Printer');
+        
+        if(isset($_POST['Printer']))
+        {
+            $model->attributes=$_POST['Printer'];
+            if($model->save())
+            {
+                $this->redirect(array('view', 'id'=>$model->id));
+            }
+        }
+        
+        $this->render('edit', array('model'=>$model));
     }
 }
 

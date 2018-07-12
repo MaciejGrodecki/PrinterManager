@@ -2,6 +2,8 @@
 
 class BaseController extends Controller
 {
+    public $layout = '//layouts/column2';
+    
     protected function getModel($id, $modelName)
     {
         $criteria = new CDbCriteria();
