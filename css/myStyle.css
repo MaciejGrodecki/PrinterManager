@@ -54,7 +54,14 @@
     border-left: none !important;
 }
 
+.portlet-content {
+    background: white !important;
+}
 
 .deleteBtn {
     color: red !important;
+}
+
+.grid-view table.items tr.odd {
+    background: white !important;
 }

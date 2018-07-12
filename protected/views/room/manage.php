@@ -17,8 +17,10 @@
 <?php $this->endWidget(); ?>
     
 </div>
+<div class="pageTitle">
+    <h3>Zarządzaj pomieszczeniami</h3>
+</div>
 
-<h3>Zarządzaj pomieszczeniami</h3>
 <?php 
 
 $this->widget('zii.widgets.grid.CGridView', array(

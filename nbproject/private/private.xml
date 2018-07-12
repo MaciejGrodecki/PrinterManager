@@ -1,11 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
-    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="1">
+        <file>
+            <url>css/myStyle.css</url>
+            <bookmark id="1">
+                <name/>
+                <line>36</line>
+                <key/>
+            </bookmark>
+        </file>
+    </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp/htdocs/PrinterManager/protected/controllers/SiteController.php</file>
+            <file>file:/C:/xampp/htdocs/PrinterManager/protected/views/room/manage.php</file>
+            <file>file:/C:/xampp/htdocs/PrinterManager/protected/views/room/view.php</file>
+            <file>file:/C:/xampp/htdocs/PrinterManager/protected/views/room/add.php</file>
+            <file>file:/C:/xampp/htdocs/PrinterManager/protected/migrations/m180711_104142_create_printer_table.php</file>
+            <file>file:/C:/xampp/htdocs/PrinterManager/protected/views/printer/index.php</file>
+            <file>file:/C:/xampp/htdocs/PrinterManager/protected/controllers/RoomController.php</file>
             <file>file:/C:/xampp/htdocs/PrinterManager/protected/views/layouts/main.php</file>
-            <file>file:/C:/xampp/htdocs/PrinterManager/protected/components/Controller.php</file>
+            <file>file:/C:/xampp/htdocs/PrinterManager/protected/models/Printer.php</file>
+            <file>file:/C:/xampp/htdocs/PrinterManager/protected/views/room/edit.php</file>
+            <file>file:/C:/xampp/htdocs/PrinterManager/protected/models/Room.php</file>
+            <file>file:/C:/xampp/htdocs/PrinterManager/protected/views/room/index.php</file>
+            <file>file:/C:/xampp/htdocs/PrinterManager/protected/controllers/PrinterController.php</file>
+            <file>file:/C:/xampp/htdocs/PrinterManager/css/myStyle.css</file>
+            <file>file:/C:/xampp/htdocs/PrinterManager/protected/views/layouts/column2.php</file>
         </group>
     </open-files>
 </project-private>
