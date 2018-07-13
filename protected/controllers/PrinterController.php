@@ -20,7 +20,8 @@ class PrinterController extends BaseController
         $model = new Printer('search');
         $model->unsetAttributes();
         
-        if(isset($_GET['Printer']))
+
+        if(Yii::app()->request->getQuery('Printer') !== null)
         {
             $model->attributes=$_GET['Printer'];
         }
@@ -42,7 +43,7 @@ class PrinterController extends BaseController
         $model = $this->getModel($id);
         $model->delete();
         
-        if(!isset($_GET['ajax']))
+        if(Yii::app()->request->getQuery('ajax') === null)
         {
             $this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('manage'));
         }

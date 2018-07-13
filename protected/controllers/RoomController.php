@@ -20,7 +20,7 @@ class RoomController extends BaseController
         $model = new Room('search');
         $model->unsetAttributes();
         
-        if(isset($_GET['Room']))
+        if(Yii::app()->request->getQuery('Room') !== null)
         {
             $model->attributes=$_GET['Room'];
         }
@@ -41,8 +41,7 @@ class RoomController extends BaseController
     {
         $model = $this->getModel($id);
         $model->delete();
-        
-        if(!isset($_GET['ajax']))
+        if(Yii::app()->request->getQuery('ajax') === null)
         {
             $this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('manage'));
         }

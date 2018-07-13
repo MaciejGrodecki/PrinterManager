@@ -16,7 +16,7 @@ class BaseController extends Controller
     
     protected function add($model)
     {
-        if(isset($_POST[$this->getModelName()]))
+        if(Yii::app()->request->getPost($this->getModelName()) !== null)
         {
             $model->attributes=$_POST[$this->getModelName()];
 
@@ -29,7 +29,7 @@ class BaseController extends Controller
     
     protected function update($model)
     {
-        if(isset($_POST[$this->getModelName()]))
+        if(Yii::app()->request->getPost($this->getModelName()) !== null)
         {
             $model->attributes=$_POST[$this->getModelName()];
 

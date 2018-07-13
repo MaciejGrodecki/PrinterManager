@@ -14,9 +14,6 @@ class m180711_104142_create_printer_table extends CDbMigration
             $this->addForeignKey('FK_printer_room', 
                     'tbl_printer', 'room_id', 'tbl_room', 'id', 'NO ACTION', 'NO ACTION');
 	}
-        
-        
-        
 
 	public function safeDown()
 	{
