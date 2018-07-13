@@ -9,9 +9,7 @@ class RoomController extends BaseController
     public function actionAdd()
     {
         $model = new Room;
-        
         $this->add($model);
-        
         $this->render('add', array('model'=>$model));
     }
     
@@ -24,7 +22,6 @@ class RoomController extends BaseController
         {
             $model->attributes=$_GET['Room'];
         }
-        
         $this->render('manage', array('model'=>$model));
     }
     
@@ -50,9 +47,7 @@ class RoomController extends BaseController
     public function actionUpdate($id)
     {
         $model = $this->getModel($id);
-        
         $this->update($model);
-        
         $this->render('edit', array('model'=>$model));
     }
 }

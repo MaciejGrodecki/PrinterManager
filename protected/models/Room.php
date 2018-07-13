@@ -27,7 +27,6 @@ class Room extends CActiveRecord
         );
     }
     
-    
     public function search()
     {
         $criteria = new CDbCriteria;
@@ -38,5 +37,4 @@ class Room extends CActiveRecord
             'criteria'=>$criteria
         ));
     }
-    
 }
